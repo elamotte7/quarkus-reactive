@@ -51,9 +51,14 @@ public class BeerServiceImpl implements BeerService {
     @Override
     @ReactiveTransactional
     public Uni<List<BeerDTO>> findAll() {
-        return this.beerRepository.listAll().onItem().transform( list ->
-                list.stream().map(beerMapper::toDto).toList()
+        return this.beerRepository.findAll().list().onItem().transform(list ->
+                list.stream().map(
+                        beerMapper::toDto
+                        ).toList()
         );
+//        return this.beerRepository.listAll().onItem().transform( list ->
+//                list.stream().map(beerMapper::toDto).toList()
+//        );
     }
 
     @Override

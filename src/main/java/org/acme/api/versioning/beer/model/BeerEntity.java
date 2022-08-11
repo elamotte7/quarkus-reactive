@@ -21,7 +21,7 @@ public class BeerEntity extends PanacheEntity {
     @JoinColumn
     private BreweryEntity brewery;
 
-    @ElementCollection(fetch = FetchType.EAGER)
+    @ElementCollection
     private List<String> ingredients;
 
     private float alcoholLevel;
