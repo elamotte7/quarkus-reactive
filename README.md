@@ -1,3 +1,5 @@
+[![Quarkus Codestart CI](https://github.com/elamotte7/quarkus-reactive/actions/workflows/ci.yml/badge.svg)](https://github.com/elamotte7/quarkus-reactive/actions/workflows/ci.yml)
+
 # quarkus-reactive Project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
