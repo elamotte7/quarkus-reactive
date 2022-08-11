@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mariadb:
+    image: mariadb:10.8.3
+    command:
+      - 'docker-entrypoint.sh'
+      - '--lower_case_table_names=1'
+      - '--innodb-flush-method=fsync'
+    environment:
+      - MARIADB_DATABASE=beers
+      - MARIADB_ROOT_PASSWORD=root
+    volumes:
+      - ./data/mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
+networks:
+  default: { }
